@@ -108,7 +108,7 @@ if __name__ == "__main__":
         from _helpers import mock_snakemake
 
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        snakemake = mock_snakemake("build_cutout", cutout="africa-2013-era5")
+        snakemake = mock_snakemake("build_cutout", cutout="southamerica-2013-era5")
     configure_logging(snakemake)
 
     cutout_params = snakemake.params.cutouts[snakemake.wildcards.cutout]
@@ -134,3 +134,20 @@ if __name__ == "__main__":
     features = cutout_params.pop("features", None)
     cutout = atlite.Cutout(snakemake.output[0], **cutout_params)
     cutout.prepare(features=features)
+
+import cdsapi
+c = cdsapi.Client()
+c.retrieve("southamerica-2013-era5",
+{
+"variable": "temperature",
+"pressure_level": "1000",
+"product_type": "reanalysis",
+"year": "2008",
+"month": "01",
+"day": "01",
+"time": "12:00",
+"format": "grib"
+}, "download.grib")
+ 
+ 
+
