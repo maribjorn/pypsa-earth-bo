@@ -194,11 +194,11 @@ def get_feature_for_hac(n, buses_i=None, feature=None):
         feature = "solar+onwind-time"
 
     carriers = feature.split("-")[0].split("+")
-    if "offwind" in carriers:
+    """ if "offwind" in carriers:
         carriers.remove("offwind")
         carriers = np.append(
             carriers, n.generators.carrier.filter(like="offwind").unique()
-        )
+        ) """
 
     if feature.split("-")[1] == "cap":
         feature_data = pd.DataFrame(index=buses_i, columns=carriers)

@@ -382,8 +382,8 @@ def add_RES_constraints(n, res_share):
     res_techs = [
         "solar",
         "onwind",
-        "offwind-dc",
-        "offwind-ac",
+       """  "offwind-dc",
+        "offwind-ac", """
         "battery",
         "hydro",
         "ror",

@@ -135,6 +135,10 @@ if __name__ == "__main__":
     cutout = atlite.Cutout(snakemake.output[0], **cutout_params)
     cutout.prepare(features=features)
 
+
+ 
+ 
+
 import cdsapi
 c = cdsapi.Client()
 c.retrieve("southamerica-2013-era5",
@@ -142,12 +146,9 @@ c.retrieve("southamerica-2013-era5",
 "variable": "temperature",
 "pressure_level": "1000",
 "product_type": "reanalysis",
-"year": "2008",
+"year": "2013",
 "month": "01",
 "day": "01",
 "time": "12:00",
 "format": "grib"
 }, "download.grib")
- 
- 
-

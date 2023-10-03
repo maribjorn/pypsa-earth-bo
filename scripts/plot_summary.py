@@ -31,10 +31,10 @@ def rename_techs(label):
         label = "hydrogen storage"
     elif label == "solar":
         label = "solar PV"
-    elif label == "offwind-ac":
-        label = "offshore wind ac"
-    elif label == "offwind-dc":
-        label = "offshore wind dc"
+    #elif label == "offwind-ac":
+     #   label = "offshore wind ac"
+    #elif label == "offwind-dc":
+    #    label = "offshore wind dc"
     elif label == "onwind":
         label = "onshore wind"
     elif label == "ror":

@@ -169,7 +169,7 @@ def _prepare_connection_costs_per_link(n, costs, renewable_config, lines_length_
         dc_lengths = n.links.length
         unterwater_fractions = n.links.underwater_fraction
 
-    for tech in renewable_config:
+    """ for tech in renewable_config:
         if tech.startswith("offwind"):
             connection_costs_per_link[tech] = (
                 dc_lengths
@@ -180,7 +180,7 @@ def _prepare_connection_costs_per_link(n, costs, renewable_config, lines_length_
                     + (1.0 - unterwater_fractions)
                     * costs.at[tech + "-connection-underground", "capital_cost"]
                 )
-            )
+            ) """
 
     return connection_costs_per_link
 

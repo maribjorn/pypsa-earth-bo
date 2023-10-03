@@ -304,8 +304,8 @@ def plot_total_cost_bar(n, ax=None):
             "AC-AC",
             "AC line",
             "onwind",
-            "offwind-ac",
-            "offwind-dc",
+            """ "offwind-ac",
+            "offwind-dc", """
             "solar",
             "OCGT",
             "CCGT",

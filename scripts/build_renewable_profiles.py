@@ -800,7 +800,7 @@ if __name__ == "__main__":
                 data_column=ds.weight, tech=snakemake.wildcards.technology
             )
 
-        if snakemake.wildcards.technology.startswith("offwind"):
+        """ if snakemake.wildcards.technology.startswith("offwind"):
             logger.info("Calculate underwater fraction of connections.")
             offshore_shape = gpd.read_file(paths["offshore_shapes"]).unary_union
             underwater_fraction = []
@@ -818,7 +818,7 @@ if __name__ == "__main__":
                 (ds["profile"].mean("time") >= config.get("min_p_max_pu", 0.0))
                 & (ds["p_nom_max"] >= config.get("min_p_nom_max", 0.0))
             )
-        )
+        ) """
 
         if "clip_p_max_pu" in config:
             min_p_max_pu = config["clip_p_max_pu"]
